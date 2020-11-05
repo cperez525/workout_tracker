@@ -13,6 +13,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", { useNewUrlParser: true });
 
 app.listen(PORT, () => {
