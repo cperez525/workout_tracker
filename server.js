@@ -25,7 +25,7 @@ mongoose.connect(
        useFindAndModify: false
      }
    ).then(
-      ()=>{ console.log("Connected")}
+      ()=>{ console.log("Connected, yay")}
    ).catch((err)=>{
          console.log("ERROR:", err);
       }
